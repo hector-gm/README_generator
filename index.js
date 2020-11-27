@@ -16,11 +16,6 @@ const questions = [
             message: `Please type a clear description of this project's goal. Keep it short but useful:`
         },
         {
-            type: `confirm`,
-            name: `ToC_query`,
-            message: `Do we need a Table of Contents for this documentation?`
-        },
-        {
             type: `input`,
             name: `installation`,
             message: `What are the steps required to get your project's development environment running?`
@@ -43,11 +38,6 @@ const questions = [
             ],
         },
         {
-            type: `confirm`,
-            name: `contributing_guidelines`,
-            message: `Adhere to the Contributor Covenant for this project?`
-        },
-        {
             type: `list`,
             name: `tests`,
             message: `Are any tests being written for your application?`,
@@ -56,6 +46,16 @@ const questions = [
                 {name: `None planned at the moment`},
                 {name: `Test(s) welcome and appreciated, feel free to send any`}
             ],
+        },
+        {
+            type: `input`,
+            name: `account`,
+            message: 'What GitHub account should be listed for questions?'
+        },
+        {
+            type: `input`,
+            name: `email`,
+            message: `What email address can receive messages about this project?`
         }
     ];
 
@@ -63,14 +63,33 @@ inquirer.prompt(questions).then(answers => {
     console.log(answers);
         var title = answers.title;
         var description = answers.description;
-        // var contents_table = answers.ToC_query;
         var installation = answers.installation;
         var usage = answers.usage;
         var licence = answers.licence;
-        // var contributing = answers.contributing_guidelines;
         var tests = answers.tests;
+        var account = answers.account;
+        var email = answers.email;
+        var output = '# ' + title + `\n` +
+                    '## Description' + `\n`+ description + `\n` +
+                    '## Table of Contents' + `\n` +
+                    `*[Installation](#installation)`+ `\n` +
+                    `*[Usage](#usage)` + `\n` +
+                    `*[Licence](#licence)` + `\n` +
+                    `*[Contributing Guidelines](#contributing)` + `\n` +
+                    `*[Tests](#tests)` + `\n` +
+                    `*[Questions](#questions)` + `\n` +
+                    '## Installation' + `\n` + installation + `\n` +
+                    '## Usage' + `\n` + usage + `\n` +
+                    '## Licence' + `\n` + licence + `\n` +
+                    '## Contributing' + `\n` +
+                    `The Contributor Covenant Code of Conduct 
+                    https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md is applicable.`+ `\n` +
+                    '## Tests' + `\n` + tests + `\n` +
+                    '## Questions' + `\n` +
+                    email + 'http://github.com/'+account; 
+                     
 
 
-        fs.appendFile('README.md', JSON.stringify(answers), (error) =>
+        fs.writeFile('README.md', JSON.stringify(output), (error) =>
         error ? console.error(error) : console.log("File is saved!"));
     }); 

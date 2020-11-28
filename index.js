@@ -91,5 +91,5 @@ inquirer.prompt(questions).then(answers => {
 
 
         fs.writeFile('README.md', JSON.stringify(output), (error) =>
-        error ? console.error(error) : console.log("File is saved!"));
+        error ? console.error(error) : console.log("File is saved! Check your project folder."));
     }); 

@@ -84,7 +84,7 @@ inquirer.prompt(questions).then(answers => {
                     "## Usage" + usage +
                     "## Licence" + licence +
                     "## Contributing" +
-                    "The Contributor Covenant Code of Conduct" 
+                    "The Contributor Covenant Code of Conduct" +
                     "https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md is applicable." +
                     "## Tests" + tests +
                     "## Questions" +

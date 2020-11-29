@@ -69,24 +69,26 @@ inquirer.prompt(questions).then(answers => {
         var tests = answers.tests;
         var account = answers.account;
         var email = answers.email;
-        var output = '# ' + title + `\n` +
-                    '## Description' + `\n`+ description + `\n` +
-                    '## Table of Contents' + `\n` +
-                    `*[Installation](#installation)`+ `\n` +
-                    `*[Usage](#usage)` + `\n` +
-                    `*[Licence](#licence)` + `\n` +
-                    `*[Contributing Guidelines](#contributing)` + `\n` +
-                    `*[Tests](#tests)` + `\n` +
-                    `*[Questions](#questions)` + `\n` +
-                    '## Installation' + `\n` + installation + `\n` +
-                    '## Usage' + `\n` + usage + `\n` +
-                    '## Licence' + `\n` + licence + `\n` +
-                    '## Contributing' + `\n` +
-                    `The Contributor Covenant Code of Conduct 
-                    https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md is applicable.`+ `\n` +
-                    '## Tests' + `\n` + tests + `\n` +
-                    '## Questions' + `\n` +
-                    email + 'http://github.com/'+account; 
+        var output = "#  "+ title + 
+                    "## Description " + 
+                    description +
+                    "## Table of Contents" +
+                    "*[Installation](#installation)" +
+                    "*[Usage](#usage)" +
+                    "*[Licence](#licence)" +
+                    "*[Contributing Guidelines](#contributing)" +
+                    "*[Tests](#tests)" +
+                    "*[Questions](#questions)" +
+                    "## Installation" + 
+                    installation +
+                    "## Usage" + usage +
+                    "## Licence" + licence +
+                    "## Contributing" +
+                    "The Contributor Covenant Code of Conduct" 
+                    "https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md is applicable." +
+                    "## Tests" + tests +
+                    "## Questions" +
+                    email + "http://github.com/" + account; 
                      
 
 

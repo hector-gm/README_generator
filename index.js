@@ -60,6 +60,7 @@ const questions = [
     ];
 
 inquirer.prompt(questions).then(answers => {
+    // let {title, description, installation, usage, licence, tests, account, email, output} = answers;
     console.log(answers);
         var title = answers.title;
         var description = answers.description;
@@ -69,29 +70,44 @@ inquirer.prompt(questions).then(answers => {
         var tests = answers.tests;
         var account = answers.account;
         var email = answers.email;
-        var output = "#  "+ title + 
-                    "## Description " + 
-                    description +
-                    "## Table of Contents" +
-                    "*[Installation](#installation)" +
-                    "*[Usage](#usage)" +
-                    "*[Licence](#licence)" +
-                    "*[Contributing Guidelines](#contributing)" +
-                    "*[Tests](#tests)" +
-                    "*[Questions](#questions)" +
-                    "## Installation" + 
-                    installation +
-                    "## Usage" + usage +
-                    "## Licence" + licence +
-                    "## Contributing" +
-                    "The Contributor Covenant Code of Conduct" +
-                    "https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md is applicable." +
-                    "## Tests" + tests +
-                    "## Questions" +
-                    email + "http://github.com/" + account; 
-                     
+        var output = `
+# ${title}  
+## Description   
+    ${description }
+
+## Table of Contents 
+    *[Installation](#installation) 
+    *[Usage](#usage)
+    *[Licence](#licence) 
+    *[Contributing Guidelines](#contributing) 
+    *[Tests](#tests) 
+    *[Questions](#questions)
 
 
-        fs.writeFile('README.md', JSON.stringify(output), (error) =>
+## Installation  
+${installation }
+
+## Usage  
+${usage}
+
+## Licence  
+${licence} 
+
+## Contributing 
+
+The Contributor Covenant Code of Conduct 
+https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md is applicable. 
+
+## Tests  
+${tests} 
+
+## Questions 
+Email: ${email}  
+GitHub: http://github.com/${account};
+
+`                     
+
+
+        fs.writeFile('README.md', output, (error) =>
         error ? console.error(error) : console.log("File is saved! Check your project folder."));
     }); 

@@ -27,8 +27,8 @@ const questions = [
         },
         {
             type: `list`,
-            name: `licence`,
-            message: `Select the type of licence applicable for this project:`,
+            name: `license`,
+            message: `Select the type of license applicable for this project:`,
             choices: [
                 {name: `Academic Free License v3.0`},
                 {name: `Apache License 2.0`},
@@ -60,13 +60,13 @@ const questions = [
     ];
 
 inquirer.prompt(questions).then(answers => {
-    // let {title, description, installation, usage, licence, tests, account, email, output} = answers;
+    // let {title, description, installation, usage, license, tests, account, email, output} = answers;
     console.log(answers);
         var title = answers.title;
         var description = answers.description;
         var installation = answers.installation;
         var usage = answers.usage;
-        var licence = answers.licence;
+        var license = answers.license;
         var tests = answers.tests;
         var account = answers.account;
         var email = answers.email;
@@ -80,7 +80,7 @@ inquirer.prompt(questions).then(answers => {
 ## Table of Contents 
     *[Installation](#installation) 
     *[Usage](#usage)
-    *[Licence](#licence) 
+    *[License](#license) 
     *[Contributing Guidelines](#contributing) 
     *[Tests](#tests) 
     *[Questions](#questions)

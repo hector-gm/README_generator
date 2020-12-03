@@ -33,7 +33,7 @@ const questions = [
                 {name: `Academic Free License v3.0`},
                 {name: `Apache License 2.0`},
                 {name: `Artistic License 2.0`},
-                {name: `MIT`},
+                {name: `MIT License`},
                 {name: `Open Software License 3.0`}
             ],
         },
@@ -71,7 +71,9 @@ inquirer.prompt(questions).then(answers => {
         var account = answers.account;
         var email = answers.email;
         var output = `
-# ${title}  
+![License](https://img.shields.io/github/license/hector-gm/README_generator)
+        # ${title}  
+
 ## Description   
     ${description }
 
@@ -92,6 +94,7 @@ ${usage}
 
 ## Licence  
 ${licence} 
+
 
 ## Contributing 
 

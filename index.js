@@ -71,7 +71,7 @@ inquirer.prompt(questions).then(answers => {
         var account = answers.account;
         var email = answers.email;
         var output = `
-[![License](https://img.shields.io/badge/<License>-<Defined in Document>-<yellow>.svg)](https://shields.io/)
+[![License](https://img.shields.io/badge/<License>-<${license}>-<yellow>.svg)](https://shields.io/)
     # ${title}  
 
 ## Description   
@@ -91,10 +91,11 @@ ${installation }
 
 ## Usage  
 ${usage}
+<iframe src="https://drive.google.com/file/d/1SG2Glr5Fx_iS49lccHiWTD1TQ1r6WolC/preview" width="640" height="480"></iframe>
 
 ## License  
 ${license} 
-
+[![License](https://img.shields.io/badge/<License>-<${license}>-<yellow>.svg)](https://shields.io/)
 
 ## Contributing 
 

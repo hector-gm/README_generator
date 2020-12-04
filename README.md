@@ -1,7 +1,6 @@
 
-![License](https://img.shields.io/github/license/hector-gm/README_generator)
-
-   # README_generator  
+[![License](https://img.shields.io/badge/<License>-<Defined in Document>-<yellow>.svg)](https://shields.io/)
+    # README_generator  
 
 ## Description   
     This is a command line application meant to assist in the creation of a good professional README.md file for most projects.
@@ -16,10 +15,10 @@
 
 
 ## Installation  
-Copy code from this repository, run npm install for "inquirer" if not already loaded in your workplace to enable the prompt command in this .js file.
+Copy code from this repository, open the index.js file. Make sure to run `npm install inquirer` if not already loaded in your workplace to enable the prompt command in this .js file.
 
 ## Usage  
-Once the code is being run within your terminal, follow the prompts with typed responses or selections as applicable. Please note that some questions have default answers formulated and a simple Enter key press will make use of those values. This should save you some time in preparing your project's documentation in a presentable manner.
+Once the code is being run within your terminal, follow the prompts with typed responses or selections as applicable. Please note that some questions have default answers formulated and a simple *Enter* key press will make use of those values. This should save you some time in preparing your project's documentation in a presentable manner. *This README file is an actual example of this application in use*
 
 ## License  
 MIT License 

@@ -71,8 +71,8 @@ inquirer.prompt(questions).then(answers => {
         var account = answers.account;
         var email = answers.email;
         var output = `
-![License](https://img.shields.io/github/license/hector-gm/README_generator)
-        # ${title}  
+[![License](https://img.shields.io/badge/<License>-<Defined in Document>-<yellow>.svg)](https://shields.io/)
+    # ${title}  
 
 ## Description   
     ${description }
@@ -92,8 +92,8 @@ ${installation }
 ## Usage  
 ${usage}
 
-## Licence  
-${licence} 
+## License  
+${license} 
 
 
 ## Contributing 
